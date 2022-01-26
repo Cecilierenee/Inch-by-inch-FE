@@ -1,5 +1,5 @@
-# Inch-by-inch-FE
-This Repo is the Front-end of my Capstone project. For this project, I will be coding the Front and Back-End to an application of my choice. 
+# Inch-by-inch-FrontEnd
+This Repo is the Front-end of my Capstone project. For this project, I will be coding the Front and Back-End to an application of my choice. I will be using Angular and bootstrap to build my FrontEnd. [Repo for the BackEnd](https://github.com/Cecilierenee/Inch-by-inch-BE)
 
 ## Purpose
 After doing the “Big Chop”, it didn’t take me long to realize; that it was going to be a long, strategic and possibly expensive process to find the products that work with my hair. To simplify this process, I’m creating an app to keep track of the various products and hair routines I follow.
