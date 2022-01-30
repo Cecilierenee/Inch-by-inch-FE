@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const AUTH_API = '';
+//Sends the signup and login HTTP post request to backend
+
+const AUTH_API = 'http://localhost:9192/api/auth/';//check for correct port number
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 }
