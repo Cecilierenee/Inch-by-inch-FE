@@ -20,5 +20,6 @@ Users will be able to create a hair routine, where they can add, delete, and edi
 ![Inch-by-inch](https://user-images.githubusercontent.com/89564513/151240985-ef828ded-a24a-4370-9b95-593aa65f34bd.png)
 
 ## WireFrame
+![wireframe](https://user-images.githubusercontent.com/89564513/151693998-2d9c013f-c95e-461f-b852-e3fa4f6661a9.png)
 
 
