@@ -1,5 +1,8 @@
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { TokenStorageService } from './_services/token-storage.service';
+import { NgForm } from '@angular/forms';
+import { Routine } from './routine';
+import { RoutineService } from './routine.service';
 
 @Component({
   selector: 'app-root',
@@ -7,33 +10,53 @@ import { TokenStorageService } from './_services/token-storage.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'inch-by-inch';
+  public routines?: Routine[] = [];
 
-  private roles: string[] = [];
-  isLoggedIn = false;
-  showAdminBoard = false;
-  showModeratorBoard = false;
-  username?: string;
-
-  constructor(private tokenStorageService: TokenStorageService) { }
+  constructor(private routineService: RoutineService) {}
 
   ngOnInit(): void {
-    this.isLoggedIn = !!this.tokenStorageService.getToken();
-
-    if (this.isLoggedIn) {
-      const user = this.tokenStorageService.getUser();
-      this.roles = user.roles;
-
-      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
-
-      this.username = user.username;
-    }
+      this.getAllRoutines();
   }
 
-  logout(): void {
-    this.tokenStorageService.signOut();
-    window.location.reload();
-  
-}
-}
+  public getAllRoutines(): void {
+    this.routineService.getAllRoutines().subscribe(
+      (response: Routine[]) => {
+        this.routines = response;
+      },
+      (error: HttpErrorResponse) => {
+        console.log('Get all error')
+      }
+      );
+  }
+  public onAddRoutine(addForm: NgForm): void {
+    document.getElementById('addForm')?.click();
+    this.routineService.addRoutine(addForm.value).subscribe(
+      (response: Routine) => {
+        console.log(response);
+        this.getAllRoutines();
+      },
+      (error: HttpErrorResponse)=> {
+        alert(error.message);
+      }
+    );
+  }
+
+ public onOpenModal(routine: Routine, mode: string): void {
+    const container = document.getElementById('mainContainer');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.style.display = 'none';
+    button.setAttribute('data-toggle', 'modal');
+    if (mode === 'add') {
+      button.setAttribute('data-toggle', '#addRoutineModal');
+    }
+    if (mode === 'edit') {
+      button.setAttribute('data-toggle', '#updateRoutineModal');
+    }
+    if (mode === 'delete') {
+      button.setAttribute('data-toggle', '#deleteRoutineModal');
+    }
+    container?.appendChild(button);
+    button.click();
+
+}}
