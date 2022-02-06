@@ -17,7 +17,7 @@ Users will be able to create a hair routine, where they can add, delete, and edi
   -User Login and registration errors<br>
   -Began working on Front End wireframe
 
-## Day 5 :trollface:
+### Day 5 :trollface:
   -Front end is coming together<br>
   -Still having issues with authorization, decided to scrap it.<br>
   -Hurdle: Going to broad, and maybe challenging myself too much
@@ -31,3 +31,22 @@ Users will be able to create a hair routine, where they can add, delete, and edi
   - Worked with bootstrap<br>
   - form validation in my Angular code<br>
   - Got endpoints to test properly<br>
+
+*********************************************************************************************************************************************************************************
+### Beyond The BootCamp :rainbow:
+
+*02/05/2022*
+
+Today Marks the day after the Java bootcamp I had the pleasure to participate in over the past 12 weeks. And while I worked very hard on my capstone project, I'm still left obsessing over the functionality of my web application. I find myself with a bit of an empty schedule at the moment, so to fill that void, I will be keep my skills sharp by completing my application and documenting the process.
+
+A few things I would like to focus on at the moment;<br>
+  -Completing the functionality of my app (add, edit and delete funtions)<br>
+  -Working with Bootstrp and my Css to ensure my app looks great!<br>
+  -Unit testing<br>
+  -Deplyoment<br>
+  
+  ## The Process
+  
+  ### Day 8 :sun_with_face:
+  -Adding my delete, and update funtionality.<br>
+  -Getting my form to post new routines
