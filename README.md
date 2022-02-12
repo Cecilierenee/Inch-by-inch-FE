@@ -111,3 +111,9 @@ A few things I would like to focus on at the moment;<br>
   4. My addRoutine Modal that was showing is now hidden, I just have to figure out how to get my button click to trigger it.
 
 ### Day 9: Self-Care Sunday :tropical_drink:
+
+### Update: *02/11/22*<br>
+
+Over the last week, I've been really thinking about what I could do to make my application deploy ready. I've decided to narraw my scope just a bit more. For now, I want to focus on having the ability to *add* a routnine and to *delete* a routine. 
+
+Because I need a bit more practice on writing test cases for my code, I'm going to start by going in an writing test for my add and delete method. Then I will continue to work with angular to consume those endpoints. 
